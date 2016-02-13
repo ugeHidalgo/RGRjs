@@ -7,7 +7,7 @@ let ServerActions =  {
     receiveLinks(links) {
         //Lanzar un acción de tipo RECEIVE_LINKS con los links incluidos
         console.log('- Action dispatched: '+ActionTypes.RECEIVE_LINKS);
-        debugger;
+        
         AppDispatcher.dispatch({
             actionType: ActionTypes.RECEIVE_LINKS,
             links: links
