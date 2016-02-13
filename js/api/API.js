@@ -3,12 +3,12 @@ import ServerActions from '../actions/serverActions';//Require al módulo del di
 
 let API = {
   fetchLinks(fetchLinks){
-      console.log ('- Fetching Links API...');
+      console.log ('- (1.1) Fetching Links API...');
       
       //Read Links API using an AJAX call a /data/links
       //Cuando la llamada get devuelva se lanza el callback definido en done
       get("/data/links").done (linksResponse => {
-          console.log ('- Links API was fetched.');
+          console.log ('- (1.2) Links API was fetched.');
           
           //usaremos un modulo ServerActions que se encargará de usar el dispatcher 
           //para lanzar las acciones

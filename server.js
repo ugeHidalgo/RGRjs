@@ -16,7 +16,7 @@ MongoClient.connect(process.env.MONGO_URL,(err, database) => {
     if (err) throw err;
     
     db= database;
-    app.listen(3000, () => {console.log("Listening on port 3000")});
+    app.listen(3000, () => {console.log("- Listening on port 3000")}); //Sale en la linea de comandos al iniciar la app con nodemon
 });
 
 
