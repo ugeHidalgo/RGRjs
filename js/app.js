@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Hello from './components/hello';
+import Main from './components/main';
 
 /*var Hello = React.createClass({
     render: function() {
@@ -10,4 +10,4 @@ import Hello from './components/hello';
     }
 }); */
 
-ReactDOM.render(<Hello />,document.getElementById('react'));
+ReactDOM.render(<Main />,document.getElementById('react'));

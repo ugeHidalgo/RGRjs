@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Some ReactJS trials",
   "scripts": {
-      "start": "babel-node server.js"
+    "start": "babel-node server.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,8 @@
   "homepage": "https://github.com/rgrjs/rgrjs.com#readme",
   "dependencies": {
     "express": "^4.13.4",
+    "kerberos": "0.0.18",
+    "mongodb": "^2.1.7",
     "react": "^0.14.7",
     "react-dom": "^0.14.7"
   },
