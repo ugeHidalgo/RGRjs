@@ -1,5 +1,5 @@
 import {get} from 'jquery'; //Se usa para hace un AJAX call tipo get
-import ServerActions from './actions/serverActions';//Require al módulo del dispatcher
+import ServerActions from '../actions/serverActions';//Require al módulo del dispatcher
 
 let API = {
   fetchLinks(fetchLinks){
