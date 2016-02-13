@@ -17,6 +17,8 @@
   "homepage": "https://github.com/rgrjs/rgrjs.com#readme",
   "dependencies": {
     "express": "^4.13.4",
+    "flux": "^2.1.1",
+    "jquery": "^2.2.0",
     "kerberos": "0.0.18",
     "mongodb": "^2.1.7",
     "react": "^0.14.7",

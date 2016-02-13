@@ -14,7 +14,8 @@ module.exports = {
                 query: {
                     presets: ['react','es2015']
                 }
-            } //loader es el loader que hará la carga
+            } //loader es el loader que hará el preprocesado del ES6 a ES5 ántes de que 
+            // webpack haga el bundle con todos los ficherosla carga
         ]
     }
 }
