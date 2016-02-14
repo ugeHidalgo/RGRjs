@@ -7,7 +7,7 @@ import {EventEmitter} from 'events'; //requiere instalar el modulo events
 let _links = [];
 
 //Sin ES6 se usaba object-assign del modulo assign para hacer que el
-//store pudiera extender la calase EventEmitter. Con ES6 es más fácil.
+//store pudiera extender la clase EventEmitter. Con ES6 es más fácil.
 class LinkStore extends EventEmitter{
     
         //Registrar el AppDispatcher usando el constructor
