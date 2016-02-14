@@ -1,18 +1,20 @@
-import {get} from 'jquery'; //Se usa para hace un AJAX call tipo get
+import {post} from 'jquery'; //Se usa para hacer la llamada a la mongoDb query
 import ServerActions from '../actions/serverActions';//Require al módulo del dispatcher
 
 let API = {
   fetchLinks(fetchLinks){
       console.log ('- (1.1) Fetching Links API...');
       
-      //Read Links API using an AJAX call a /data/links
-      //Cuando la llamada get devuelva se lanza el callback definido en done
-      get("/data/links").done (linksResponse => {
+      //Read Links API using a query to /graphql
+      //Cuando la devuelva los datos lanza el callback definido en done
+      post("/graphql",{
+          query: '{links{_id,title,url}}' //esta es la query usada para obtener los datos
+        }).done (linksResponse => {
           console.log ('- (1.2) Links API was fetched.');
           
           //usaremos un modulo ServerActions que se encargará de usar el dispatcher 
           //para lanzar las acciones
-          ServerActions.receiveLinks(linksResponse);
+          ServerActions.receiveLinks(linksResponse.data.links);
       });
   }
     
