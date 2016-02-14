@@ -45,8 +45,10 @@ export default class Main extends React.Component {
     render() {
         
         let content = this.state.links.map(link => {
+            debugger;
             return <li key={link._id}>
                         <a href={link.url}>{link.title}</a>
+                        ({link.description})
                    </li>;
         });
         

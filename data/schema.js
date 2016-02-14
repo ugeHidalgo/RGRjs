@@ -19,6 +19,7 @@ let Schema = (db) => {
         fields: () => ({
             _id: { type: GraphQLString },
             title: { type: GraphQLString },
+            description: { type: GraphQLString },            
             url: { type: GraphQLString }
         })
     });

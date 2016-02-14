@@ -8,7 +8,7 @@ let API = {
       //Read Links API using a query to /graphql
       //Cuando la devuelva los datos lanza el callback definido en done
       post("/graphql",{
-          query: '{links{_id,title,url}}' //esta es la query usada para obtener los datos
+          query: '{links{_id,title,description,url}}' //esta es la query usada para obtener los datos
         }).done (linksResponse => {
           console.log ('- (1.2) Links API was fetched.');
           
