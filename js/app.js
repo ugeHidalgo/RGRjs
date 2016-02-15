@@ -10,4 +10,7 @@ import Main from './components/main';
     }
 }); */
 
+
+//limit fija el número máximo de elementos que puedo mostrar 
+// <Main limit={4} />, si no se pone, como ahora se coge el default
 ReactDOM.render(<Main />,document.getElementById('react'));

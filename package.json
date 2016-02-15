@@ -7,15 +7,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rgrjs/rgrjs.com.git"
+    "url": ""
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rgrjs/rgrjs.com/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/rgrjs/rgrjs.com#readme",
+  "homepage": "",
   "dependencies": {
+    "babel-preset-stage-0": "^6.5.0",
     "express": "^4.13.4",
     "express-graphql": "^0.4.9",
     "flux": "^2.1.1",

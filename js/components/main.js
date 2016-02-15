@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component,PropTypes} from 'react';
 import Api from '../api/API';
 import LinkStore from '../stores/linkStore';
 
@@ -7,11 +7,18 @@ let _getAppState = () => {
     return {links : LinkStore.getAll()};  
 };
 
-export default class Main extends React.Component {
+class Main extends Component {
     
-    setDefault(){
+    //Sirven para forzar validaciones, en este caso limit debe ser un número.
+    static propTypes = {
+        limit: React.PropTypes.number
+    };
         
-    }
+    //Sirven para establecer un valor por defecto en caso de que falte.
+    static defaultProps = {
+        limit: 4
+    };
+    
     
     constructor(props){
         super(props);
@@ -44,7 +51,7 @@ export default class Main extends React.Component {
     
     render() {
         
-        let content = this.state.links.map(link => {
+        let content = this.state.links.slice(0,this.props.limit).map(link => {
             return <li key={link._id}>
                         <a href={link.url}>{link.title}</a>
                         ({link.description})
@@ -61,3 +68,5 @@ export default class Main extends React.Component {
         );
     } 
 }
+
+export default Main
